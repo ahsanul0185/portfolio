@@ -16,7 +16,7 @@ const testimonials = [
       "It was super awesome working with Ahsanul. He finished the work in record time, delivered high-quality results, and really surprised me. This was my first time using Fiverr, and I was really reluctant to hire anyone as I was scared of being scammed or paying without getting my money’s worth. But I literally got an exceptional product and can definitely recommend him. If you are looking to build something, I recommend Ahsanul. The price was fair, especially considering he worked constantly on this",
     name: "Dylan",
     city: "Canada",
-    avatar: "https://i.pravatar.cc/150?u=Dylan",
+    avatar: "https://i.pravatar.cc/150?u=Olivia",
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const testimonials = [
       "I had the absolute pleasure of working with ahsanul, and I can confidently say that their service has been nothing short of exceptional. From the very beginning, they showcased a deep understanding of web development and a commitment to delivering excellence. Not only did they meet my expectations, but they exceeded them in every way possible. Their technical skills are outstanding, and they approach each task with professionalism, attention to detail, and creativity. ",
     name: "Esd Sukki",
     city: "United States",
-    avatar: "https://i.pravatar.cc/150?u=Esd",
+    avatar: "https://i.pravatar.cc/150?u=Emily",
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ const testimonials = [
       "Good works. Ahsanul worked day and night on a time-critical project and delivered high-quality results. He is a rising talent in this field. I will continue to work with him. Highly recommended.",
     name: "Orest",
     city: "United Kingdom",
-    avatar: "https://i.pravatar.cc/150?u=Orest",
+    avatar: "https://i.pravatar.cc/150?u=James",
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ const testimonials = [
       "Great attention to details, easy to work with, final delivery met all the expectations.",
     name: "Matthew",
     city: "Australia",
-    avatar: "https://i.pravatar.cc/150?u=Matthew",
+    avatar: "https://i.pravatar.cc/150?u=Jack",
   },
   {
     id: 5,
@@ -81,7 +81,7 @@ export default function Testimonials() {
       <div className="flex flex-col lg:flex-row gap-8 items-stretch lg:items-start">
         {/* LEFT PANEL */}
         <div className="flex justify-between w-full lg:w-52 shrink-0 self-stretch pb-5 lg:pb-0 lg:pr-7 border-b lg:border-b-0 lg:border-r border-secondary-foreground/30 flex-row lg:flex-col items-center lg:items-start text-center lg:text-left gap-4 lg:gap-0">
-          <div className="flex flex-col items-center lg:items-start w-full">
+          <div className="flex flex-col items-center lg:items-start">
             <span className="text-white font-extrabold text-5xl md:text-6xl leading-none">4.9</span>
             <div className="mt-2"><Stars count={5} /></div>
             <p className="text-[#555] text-xs uppercase tracking-widest mt-2">Average Rating</p>
@@ -93,7 +93,7 @@ export default function Testimonials() {
             rel="noopener noreferrer"
             className="mt-auto lg:mt-10 inline-flex flex-col items-center lg:items-start gap-3 group"
           >
-            <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#888] group-hover:text-primary transition-colors duration-300">
+            <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#888] group-hover:text-primary transition-colors duration-300 whitespace-nowrap">
               Check me on
             </span>
             <img 
