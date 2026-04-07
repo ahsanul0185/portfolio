@@ -5,47 +5,54 @@ import { useCallback } from "react";
 import Title from "../ui/Title";
 import { IoStar } from "react-icons/io5";
 import { ImQuotesRight } from "react-icons/im";
+import { FaAngleLeft } from "react-icons/fa";
+import { LiaAngleLeftSolid, LiaAngleRightSolid } from "react-icons/lia";
 
 const testimonials = [
   {
     id: 1,
-    platform: "Upwork",
     rating: 5,
     quote:
-      "REVOX STUDIO HAS CREATED REMARKABLE WORK FOR THE WHITNEY BUILDING THAT HELPED US DEFINE NOT JUST THIS INDIVIDUAL BUILDING BUT THE NEW DIRECTION IN WHICH WE ARE HEADING AS A GROUP",
-    name: "MICHAEL SARAH",
-    role: "CEO AT ROLLUPLIFE INC",
-    avatar: "https://i.pravatar.cc/80?img=11",
+      "It was super awesome working with Ahsanul. He finished the work in record time, delivered high-quality results, and really surprised me. This was my first time using Fiverr, and I was really reluctant to hire anyone as I was scared of being scammed or paying without getting my money’s worth. But I literally got an exceptional product and can definitely recommend him. If you are looking to build something, I recommend Ahsanul. The price was fair, especially considering he worked constantly on this",
+    name: "Dylan",
+    city: "Canada",
+    avatar: "https://i.pravatar.cc/150?u=Dylan",
   },
   {
     id: 2,
-    platform: "Fiverr",
     rating: 5,
     quote:
-      "REVOX STUDIO HAS CREATED REMARKABLE WORK FOR THE WHITNEY BUILDING THAT HELPED US DEFINE NOT JUST THIS INDIVIDUAL BUILDING BUT THE NEW DIRECTION IN WHICH WE ARE HEADING AS A GROUP",
-    name: "MICHAEL SARAH",
-    role: "CEO AT ROLLUPLIFE INC",
-    avatar: "https://i.pravatar.cc/80?img=11",
+      "I had the absolute pleasure of working with ahsanul, and I can confidently say that their service has been nothing short of exceptional. From the very beginning, they showcased a deep understanding of web development and a commitment to delivering excellence. Not only did they meet my expectations, but they exceeded them in every way possible. Their technical skills are outstanding, and they approach each task with professionalism, attention to detail, and creativity. ",
+    name: "Esd Sukki",
+    city: "United States",
+    avatar: "https://i.pravatar.cc/150?u=Esd",
   },
   {
     id: 3,
-    platform: "Clutch",
     rating: 5,
     quote:
-      "WORKING WITH REVOX WAS AN OUTSTANDING EXPERIENCE. THEY DELIVERED BEYOND EXPECTATIONS AND TRANSFORMED OUR BRAND IDENTITY INTO SOMETHING TRULY WORLD CLASS.",
-    name: "JAMES CARTER",
-    role: "FOUNDER AT NEXLAYER",
-    avatar: "https://i.pravatar.cc/80?img=15",
+      "Good works. Ahsanul worked day and night on a time-critical project and delivered high-quality results. He is a rising talent in this field. I will continue to work with him. Highly recommended.",
+    name: "Orest",
+    city: "United Kingdom",
+    avatar: "https://i.pravatar.cc/150?u=Orest",
   },
   {
     id: 4,
-    platform: "Upwork",
     rating: 5,
     quote:
-      "THE TEAM AT REVOX STUDIO BROUGHT A LEVEL OF CREATIVITY AND PROFESSIONALISM THAT WE HAVE NEVER SEEN BEFORE. OUR PROJECT WAS DELIVERED ON TIME AND EXCEEDED ALL GOALS.",
-    name: "SARAH JOHNSON",
-    role: "CMO AT BRIGHTPATH",
-    avatar: "https://i.pravatar.cc/80?img=5",
+      "Great attention to details, easy to work with, final delivery met all the expectations.",
+    name: "Matthew",
+    city: "Australia",
+    avatar: "https://i.pravatar.cc/150?u=Matthew",
+  },
+  {
+    id: 5,
+    rating: 5,
+    quote:
+      "The seller was professional, communicative, and delivered exactly what I needed. The quality of work exceeded my expectations, and the project was completed ahead of schedule. Highly recommend and will definitely work with him again!",
+    name: "Subatheesan",
+    city: "Sri Lanka",
+    avatar: "https://i.pravatar.cc/150?u=Subatheesan",
   },
 ];
 
@@ -60,17 +67,6 @@ const Stars = ({ count }: { count: number }) => (
   </div>
 );
 
-const PlatformBadge = ({ name }: { name: string }) => (
-  <span className="inline-flex items-center px-3 py-1 rounded-md bg-[#2a2a2a] text-[#888] text-xs font-semibold uppercase tracking-widest border border-[#333]">
-    {name}
-  </span>
-);
-
-const QuoteIcon = () => (
-  <svg width="32" height="26" viewBox="0 0 36 28" fill="#b5f23d">
-    <path d="M0 28V17.5C0 7.833 5.167 2.167 15.5 0l1.5 2.5C11.667 4.167 9 7.167 8.5 12H15V28H0Zm20 0V17.5C20 7.833 25.167 2.167 35.5 0L37 2.5C31.667 4.167 29 7.167 28.5 12H35V28H20Z" />
-  </svg>
-);
 
 export default function Testimonials() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ align: "start", slidesToScroll: 1, loop : true });
@@ -84,12 +80,28 @@ export default function Testimonials() {
 
       <div className="flex flex-col lg:flex-row gap-8 items-stretch lg:items-start">
         {/* LEFT PANEL */}
-        <div className="flex flex-col justify-between w-full lg:w-52 shrink-0 self-stretch pb-5 lg:pb-0 lg:pr-7 border-b lg:border-b-0 lg:border-r border-secondary-foreground/30 flex-row lg:flex-col items-center lg:items-start text-center lg:text-left gap-4 lg:gap-0">
+        <div className="flex justify-between w-full lg:w-52 shrink-0 self-stretch pb-5 lg:pb-0 lg:pr-7 border-b lg:border-b-0 lg:border-r border-secondary-foreground/30 flex-row lg:flex-col items-center lg:items-start text-center lg:text-left gap-4 lg:gap-0">
           <div className="flex flex-col items-center lg:items-start w-full">
             <span className="text-white font-extrabold text-5xl md:text-6xl leading-none">4.9</span>
             <div className="mt-2"><Stars count={5} /></div>
-            <p className="text-[#555] text-xs uppercase tracking-widest mt-2">150+ Reviews</p>
+            <p className="text-[#555] text-xs uppercase tracking-widest mt-2">Average Rating</p>
           </div>
+
+          <a 
+            href="https://www.fiverr.com/s/WEyNGZL" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="mt-auto lg:mt-10 inline-flex flex-col items-center lg:items-start gap-3 group"
+          >
+            <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#888] group-hover:text-primary transition-colors duration-300">
+              Check me on
+            </span>
+            <img 
+              src="https://images.ctfassets.net/nm80283nt6uq/mS4aWEKWmLtXrZEJpTJ6k/b3cdabe3d8a4eae6ab3dfdfda0e4666e/Fiverr_Logo_White.png" 
+              alt="Fiverr" 
+              className="h-5 md:h-6 w-auto opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+            />
+          </a>
         </div>
 
         {/* EMBLA CAROUSEL */}
@@ -108,7 +120,7 @@ export default function Testimonials() {
 
                   <ImQuotesRight fill="#b5f23d" size={32} className="md:w-[38px] md:h-[38px]" />
 
-                  <p className="text-[#cccccc] text-xs md:text-sm uppercase leading-relaxed tracking-wide font-medium flex-1">
+                  <p className="text-[#cccccc] text-xs md:text-sm uppercase leading-relaxed tracking-wide font-medium flex-1 line-clamp-5">
                     {t.quote}
                   </p>
 
@@ -119,8 +131,8 @@ export default function Testimonials() {
                       className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-[#2a2a2a]"
                     />
                     <div>
-                      <p className="text-white font-bold text-xs md:text-sm uppercase tracking-wide">{t.name}</p>
-                      <p className="text-[#555] text-[10px] md:text-xs uppercase tracking-wider mt-0.5">{t.role}</p>
+                      <p className="text-white font-semibold text-xs md:text-sm">{t.name}</p>
+                      <p className="text-[#555] text-[10px] md:text-xs mt-0.5">{t.city}</p>
                     </div>
                   </div>
                 </div>
@@ -133,20 +145,16 @@ export default function Testimonials() {
             <button
               onClick={scrollPrev}
               aria-label="Previous"
-              className="w-9 h-9 rounded-full border border-[#333] flex items-center justify-center text-white hover:border-[#b5f23d] hover:text-[#b5f23d] transition-colors duration-200"
+              className="w-9 h-9 rounded-full border border-[#333] flex items-center justify-center text-white hover:bg-primary hover:border-primary hover:text-black transition-colors duration-200"
             >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path d="M15 18l-6-6 6-6" />
-              </svg>
+              <LiaAngleLeftSolid  />
             </button>
             <button
               onClick={scrollNext}
               aria-label="Next"
-              className="w-9 h-9 rounded-full border border-[#333] flex items-center justify-center text-white hover:border-[#b5f23d] hover:text-[#b5f23d] transition-colors duration-200"
+              className="w-9 h-9 rounded-full border border-[#333] flex items-center justify-center text-white hover:bg-primary hover:border-primary hover:text-black transition-colors duration-200"
             >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path d="M9 18l6-6-6-6" />
-              </svg>
+               <LiaAngleRightSolid  />
             </button>
           </div>
         </div>

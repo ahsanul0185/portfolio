@@ -12,7 +12,7 @@ export default function Home() {
     <div>
       <Hero />
       <hr className="section-divider my-12 border-0" />
-      <div className="container px-5 md:px-8 mx-auto">
+      <div id="about" className="container px-5 md:px-8 mx-auto">
         <AnimatedCopy colorAccent="#bff747">
           <p className="font-goshiner text-[1.8rem] md:text-6xl max-w-6xl text-center mx-auto leading-tight md:leading-18 text-foreground">
             I am a passionate Web Developer with a strong focus on creating
@@ -33,7 +33,9 @@ export default function Home() {
       <TechStack />
       <hr className="section-divider my-12 border-0" />
       <hr className="section-divider my-12 border-0" />
-      <Works />
+      <div id="works">
+        <Works />
+      </div>
       <hr className="section-divider my-12 border-0" />
       <hr className="section-divider my-12 border-0" />
       <Testimonials />

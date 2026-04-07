@@ -2,6 +2,7 @@
 
 import { useTransitionRouter } from "next-view-transitions";
 import { usePathname } from "next/navigation";
+import { AnimatedThemeToggler } from "../ui/AnimatedThemeToggler";
 
 
 const navLinks = [
@@ -61,12 +62,25 @@ export default function Navbar() {
     );
   };
 
+  // const handleClick = (e : React.MouseEvent, path : string) => {
+  //   e.preventDefault();
+  //   if (path === pathname) return
+  //   router.push(path, {
+  //     onTransitionReady: slideInOut,
+  //   });
+  // };
+
   const handleClick = (e : React.MouseEvent, path : string) => {
     e.preventDefault();
-    if (path === pathname) return
-    router.push(path, {
-      onTransitionReady: slideInOut,
-    });
+    
+    const targetId = path === "/" ? "home" : path.replace("/", "");
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    } else {
+      router.push(path);
+    }
   };
 
   return (
@@ -93,6 +107,8 @@ export default function Navbar() {
               </a>
             </button>
           ))}
+
+          {/* <AnimatedThemeToggler /> */}
 
         </div>
       </nav>

@@ -142,7 +142,7 @@ export default function Projects() {
             <div className="flex flex-col justify-between w-full md:h-full md:flex-1 p-0 md:p-2 gap-4 md:gap-0">
                 <div>
                   <p className="uppercase text-xs md:text-sm opacity-90 font-medium">{card.label}</p>
-                  <p className="hidden md:block mt-12 w-[80%] opacity-0 group-hover:opacity-50 text-lg transition-opacity duration-300">{card.description}</p>
+                  <p className="hidden md:block mt-12 w-[80%] opacity-50 text-lg transition-opacity duration-300">{card.description}</p>
                 </div>
               <div className="flex items-center justify-between md:justify-normal md:items-end gap-6">
                 <h2 className="font-goshiner tracking-wide uppercase text-3xl md:text-5xl leading-none text-white mb-2 md:mb-0">

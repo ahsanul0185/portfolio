@@ -8,7 +8,7 @@ import { FaLinkedin, FaYoutube } from "react-icons/fa";
 export default function Footer() {
 
   return (
-    <footer className="container mx-auto w-full relative overflow-hidden">
+    <footer id="contact" className="container mx-auto w-full relative overflow-hidden">
       {/* Top Section */}
       <div className="px-5 md:px-12 pt-12 md:pt-16 pb-10 bg-[#1a1a1a] rounded-2xl mb-3 mx-4 md:mx-4">
         {/* GET STARTED text */}
