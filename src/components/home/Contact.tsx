@@ -2,7 +2,9 @@
 
 import React, { useState } from "react";
 import { MdOutlineMailOutline } from "react-icons/md";
+import { IoSend } from "react-icons/io5";
 import { motion } from "framer-motion";
+import Button from "../ui/Button";
 
 const Contact = () => {
   // web3Forms code
@@ -79,13 +81,13 @@ const Contact = () => {
                       {result}
                     </span>
                   )}
-                  <button
+                  <Button
                     type="submit"
-                    className="text-md text-black px-4 py-2 bg-primary duration-300"
+                    icon={<IoSend />}
+                    disabled={!!sending}
                   >
-                    {" "}
                     {!sending ? "Send Message" : sending}
-                  </button>
+                  </Button>
                 </div>
               </div>
             </form>
