@@ -28,6 +28,9 @@ export default function Copy({
     () => {
       if (!containerRef.current) return;
 
+      // Make the container visible now that JS is running
+      gsap.set(containerRef.current, { autoAlpha: 1 });
+
       splitRef.current = [];
       elementRef.current = [];
       lines.current = [];
@@ -98,14 +101,16 @@ export default function Copy({
     { scope: containerRef, dependencies: [animateOnScroll, delay] }
   );
 
-  if (React.Children.count(children) === 1 ) {
-    return React.cloneElement(children as ReactElement<any>, {
+  if (React.Children.count(children) === 1) {
+    const child = children as ReactElement<any>;
+    return React.cloneElement(child, {
       ref: containerRef,
+      style: { ...child.props.style, visibility: "hidden" },
     });
   }
 
   return (
-    <div ref={containerRef} data-copy-wrapper="true">
+    <div ref={containerRef} data-copy-wrapper="true" style={{ visibility: "hidden" }}>
       {children}
     </div>
   );

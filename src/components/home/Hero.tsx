@@ -37,13 +37,19 @@ export default function Hero() {
       }
     );
 
-    gsap.from(buttonsRef.current, {
-      opacity: 0,
-      y: 20,
-      duration: 1.2,
-      ease: "power3.out",
-      delay: 1.5,
-    });
+    gsap.fromTo(buttonsRef.current, 
+      {
+        autoAlpha: 0,
+        y: 20,
+      },
+      {
+        autoAlpha: 1,
+        y: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        delay: 1.5,
+      }
+    );
   });
 
   return (
@@ -76,7 +82,7 @@ export default function Hero() {
           </Copy>
         </div>
 
-        <div ref={buttonsRef} className="mt-8 lg:mt-6 flex flex-wrap items-center justify-center lg:justify-start">
+        <div ref={buttonsRef} className="invisible mt-8 lg:mt-6 flex flex-wrap items-center justify-center lg:justify-start">
           <Button 
             icon={<FiArrowUpRight />}
             href="#contact"
