@@ -46,6 +46,7 @@ export default function RootLayout({
   return (
     <ViewTransitions>
     <html lang="en">
+      <GoogleAnalytics gaId="G-M5CSLTG916" />
       <body
         className={`${bebas_Neue.variable} ${geistMono.variable} ${goshiner.variable} ${helvetica.variable} font-helvetica antialiased isolation-isolate`}
       >
@@ -55,7 +56,7 @@ export default function RootLayout({
         <Footer />
         </ReactLenis>
         <SmoothCursor />
-        <GoogleAnalytics gaId="G-M5CSLTG916" />
+        
       </body>
     </html>
     </ViewTransitions>
