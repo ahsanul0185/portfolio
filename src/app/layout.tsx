@@ -8,6 +8,7 @@ import Goshiner from "next/font/local";
 import Helvetica from "next/font/local";
 import Footer from "@/components/layout/Footer";
 import { SmoothCursor } from "@/components/ui/SmoothCursor";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 
 const goshiner = Goshiner({
@@ -54,6 +55,7 @@ export default function RootLayout({
         <Footer />
         </ReactLenis>
         <SmoothCursor />
+        <GoogleAnalytics gaId="G-M5CSLTG916" />
       </body>
     </html>
     </ViewTransitions>
